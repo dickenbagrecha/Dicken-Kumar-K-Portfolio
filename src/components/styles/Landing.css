@@ -352,3 +352,167 @@
     margin-top: 8px;
   }
 }
+
+/* HUD/AI Lab Panel - Top Left */
+.hero-hud-panel {
+  position: absolute;
+  top: 130px; /* below the navbar */
+  left: 0;
+  width: 220px;
+  opacity: 0.55;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-family: 'Inter', 'Outfit', monospace, sans-serif;
+  z-index: 10;
+  padding: 12px 16px;
+  border-left: 1px solid rgba(94, 234, 212, 0.2); /* thin accent border */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.hero-hud-panel:hover {
+  opacity: 0.85;
+}
+
+/* top corner mark */
+.hero-hud-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 1px;
+  background: rgba(94, 234, 212, 0.4);
+}
+
+.hud-header {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #9ca3af;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.hud-num {
+  color: var(--accentColor);
+}
+
+.hud-divider {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.hud-title {
+  color: #eae5ec;
+}
+
+.hud-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+.hud-dot {
+  display: inline-block;
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 50%;
+  background-color: var(--accentColor);
+}
+
+.hud-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-left: 1px dashed rgba(255, 255, 255, 0.08);
+  padding-left: 10px;
+  margin-left: 1px;
+}
+
+.hud-list li {
+  font-size: 9.5px;
+  letter-spacing: 1px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.hud-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 8.5px;
+  letter-spacing: 1px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.hud-pulse {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--accentColor);
+  box-shadow: 0 0 6px var(--accentColor);
+  animation: hudPulse 2s infinite ease-in-out;
+}
+
+@keyframes hudPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.5;
+    box-shadow: 0 0 4px var(--accentColor);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    box-shadow: 0 0 8px var(--accentColor);
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.5;
+    box-shadow: 0 0 4px var(--accentColor);
+  }
+}
+
+/* Background HUD grid enhancements */
+.landing-section::before {
+  content: "+";
+  position: absolute;
+  top: 130px;
+  left: 300px;
+  font-family: monospace;
+  font-size: 9px;
+  color: rgba(94, 234, 212, 0.15);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.landing-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 10% 25%, rgba(94, 234, 212, 0.015) 1px, transparent 1px),
+    radial-gradient(circle at 90% 75%, rgba(94, 234, 212, 0.015) 1px, transparent 1px);
+  background-size: 80px 80px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-hud-panel {
+    display: none;
+  }
+}

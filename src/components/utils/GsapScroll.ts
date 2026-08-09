@@ -69,6 +69,7 @@ export function setCharTimeline(
         .fromTo(".character-model", { x: 0 }, { x: "-25%", duration: 1 }, 0)
         .to(".landing-intro", { x: "50px", opacity: 0, duration: 0.5 }, 0)
         .to(".landing-info", { x: "-50px", opacity: 0, duration: 0.5 }, 0)
+        .to(".hero-hud-panel", { x: "-30px", opacity: 0, duration: 0.4 }, 0)
         .fromTo(".about-me", { y: "40%" }, { y: "0%" }, 0);
 
       tl2

@@ -53,6 +53,19 @@ export function initialFX() {
     }
   );
 
+  // Smooth entrance for the HUD/AI Lab Panel
+  gsap.fromTo(
+    ".hero-hud-panel",
+    { opacity: 0, x: -20 },
+    {
+      opacity: 0.55,
+      x: 0,
+      duration: 1.2,
+      ease: "power2.out",
+      delay: 0.4,
+    }
+  );
+
   gsap.fromTo(
     [".header", ".icons-section", ".nav-fade"],
     { opacity: 0 },
