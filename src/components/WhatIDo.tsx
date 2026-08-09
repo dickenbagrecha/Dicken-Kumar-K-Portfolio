@@ -58,6 +58,8 @@ const WhatIDo = () => {
               />
             </svg>
           </div>
+
+          {/* Card 01: AI & ML */}
           <div
             className="what-content what-noTouch"
             ref={(el) => setRef(el, 0)}
@@ -85,28 +87,25 @@ const WhatIDo = () => {
               </svg>
             </div>
             <div className="what-corner"></div>
-
             <div className="what-content-in">
-              <h3>FRONTEND</h3>
-              <h4>Building Interactive UIs</h4>
+              <h3>01 — AI & Machine Learning</h3>
               <p>
-                Crafting performant, responsive interfaces with modern frameworks.
-                From SPAs to micro-frontends, I deliver pixel-perfect experiences.
+                Training and optimizing neural architectures, predictive systems, and deep learning models for production.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">React.js</div>
-                <div className="what-tags">Angular</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">Material UI</div>
-                <div className="what-tags">HTML5</div>
-                <div className="what-tags">CSS3</div>
+                <div className="what-tags">Python</div>
+                <div className="what-tags">Machine Learning</div>
+                <div className="what-tags">Deep Learning</div>
+                <div className="what-tags">TensorFlow</div>
+                <div className="what-tags">Scikit-learn</div>
+                <div className="what-tags">Data Processing</div>
               </div>
               <div className="what-arrow"></div>
             </div>
           </div>
+
+          {/* Card 02: Agentic AI */}
           <div
             className="what-content what-noTouch"
             ref={(el) => setRef(el, 1)}
@@ -126,26 +125,97 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>BACKEND</h3>
-              <h4>Scalable Server Architecture</h4>
+              <h3>02 — Agentic AI</h3>
               <p>
-                Designing robust APIs and microservices. From CMS platforms to
-                complex business logic, I build backends that scale.
+                Designing autonomous AI agents and intelligent workflows that can reason, interact, and execute tasks.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">NestJS</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">MongoDB</div>
-                <div className="what-tags">PostgreSQL</div>
-                <div className="what-tags">REST APIs</div>
-                <div className="what-tags">Microservices</div>
-                <div className="what-tags">Python</div>
+                <div className="what-tags">Google ADK</div>
+                <div className="what-tags">Gemini</div>
+                <div className="what-tags">LLMs</div>
+                <div className="what-tags">Agentic AI</div>
+                <div className="what-tags">RAG</div>
+                <div className="what-tags">AI Agents</div>
               </div>
               <div className="what-arrow"></div>
             </div>
           </div>
+
+          {/* Card 03: Robotics */}
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 2)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>03 — Robotics</h3>
+              <p>
+                Developing perception pipelines, ROS-based autonomous navigation, and hardware integration.
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">Computer Vision</div>
+                <div className="what-tags">OpenCV</div>
+                <div className="what-tags">CNNs</div>
+                <div className="what-tags">Robotics</div>
+                <div className="what-tags">Arduino</div>
+                <div className="what-tags">Autonomous Systems</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+
+          {/* Card 04: Full-Stack */}
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 3)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>04 — Full-Stack</h3>
+              <p>
+                Building production-ready interfaces, APIs, and intelligent applications from frontend to backend.
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">React.js</div>
+                <div className="what-tags">Next.js</div>
+                <div className="what-tags">FastAPI</div>
+                <div className="what-tags">Node.js</div>
+                <div className="what-tags">PostgreSQL</div>
+                <div className="what-tags">Tailwind CSS</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

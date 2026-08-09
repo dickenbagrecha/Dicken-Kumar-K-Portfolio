@@ -37,7 +37,7 @@
   display: flex;
   font-size: 18px;
   will-change: left, top;
-  opacity: 0.65;
+  opacity: 0.78;
   transition: opacity 0.3s ease, color 0.3s ease, transform 0.3s ease-out;
 }
 .resume-button {
