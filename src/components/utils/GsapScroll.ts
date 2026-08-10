@@ -138,25 +138,12 @@ export function setAllTimeline() {
     scrollTrigger: {
       trigger: ".career-section",
       start: "top 30%",
-      end: "100% center",
-      scrub: true,
+      end: "bottom top",
+      scrub: 4,
       invalidateOnRefresh: true,
     },
   });
   careerTimeline
-    .fromTo(
-      ".career-timeline",
-      { maxHeight: "10%" },
-      { maxHeight: "100%", duration: 0.5 },
-      0
-    )
-
-    .fromTo(
-      ".career-timeline",
-      { opacity: 0 },
-      { opacity: 1, duration: 0.1 },
-      0
-    )
     .fromTo(
       ".career-info-box",
       { opacity: 0 },
@@ -164,13 +151,9 @@ export function setAllTimeline() {
       0
     )
     .fromTo(
-      ".career-dot",
-      { animationIterationCount: "infinite" },
-      {
-        animationIterationCount: "1",
-        delay: 0.3,
-        duration: 0.1,
-      },
+      ".career-active-dot",
+      { top: "0%" },
+      { top: "100%", duration: 0.5 },
       0
     );
 
