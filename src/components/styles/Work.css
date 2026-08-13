@@ -3,14 +3,18 @@
   position: relative;
   z-index: 1;
   background-color: var(--backgroundColor);
-  padding: 80px 0;
+  padding: 40px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .work-section h2 {
   font-size: 70px;
   font-weight: 500;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .work-section h2>span {
@@ -30,7 +34,6 @@
 .carousel-track-container {
   overflow: hidden;
   width: 100%;
-  border-top: 1px solid #363636;
   border-bottom: 1px solid #363636;
 }
 
@@ -41,10 +44,12 @@
 }
 
 .carousel-slide {
+  width: 100%;
+  flex: 0 0 100%;
   min-width: 100%;
-  flex-shrink: 0;
+  max-width: 100%;
   box-sizing: border-box;
-  padding: 50px 0;
+  padding: 20px 0;
 }
 
 .carousel-content {
@@ -52,10 +57,12 @@
   align-items: center;
   gap: 60px;
   width: 100%;
+  max-width: 100%;
 }
 
 .carousel-info {
   flex: 1;
+  min-width: 0;
   display: flex;
   gap: 30px;
   align-items: flex-start;
@@ -67,17 +74,19 @@
   margin: 0;
   font-weight: 600;
   opacity: 0.3;
+  color: var(--accentColor);
 }
 
 .carousel-details {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
 }
 
 .carousel-details h4 {
-  font-size: 28px;
-  font-weight: 500;
+  font-size: 44px;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -89,11 +98,11 @@
 }
 
 .carousel-tools {
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .carousel-tools .tools-label {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   opacity: 0.6;
   text-transform: uppercase;
@@ -104,11 +113,12 @@
   font-weight: 200;
   color: #adacac;
   margin: 6px 0 0;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .carousel-image-wrapper {
   flex: 1;
+  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,12 +160,59 @@
   right: -70px;
 }
 
+/* ── Work Timeline ── */
+.work-timeline-container {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 0px;
+}
+
+.work-timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #363636;
+  transform: translateY(-50%);
+}
+
+.work-timeline-dot {
+  position: absolute;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #14b8a6;
+  box-shadow: 0px 0px 15px 3px rgba(94, 234, 212, 0.4), 0px 0px 30px 10px rgba(94, 234, 212, 0.15);
+  transform: translateY(-50%);
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.carousel-description {
+  font-size: 16px;
+  color: #d4d4d8;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 10px 0 0 0;
+  max-width: 90%;
+}
+
+.carousel-divider {
+  border: 0;
+  border-top: 1px dotted rgba(255, 255, 255, 0.2);
+  width: 100%;
+  margin: 15px 0 10px 0;
+}
+
 /* ── Dot Indicators ── */
 .carousel-dots {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: 35px;
+  margin-top: 15px;
 }
 
 .carousel-dot {
@@ -189,32 +246,32 @@
 
 .work-image-in {
   position: relative;
-}
-
-.work-link {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background-color: var(--backgroundColor);
-  width: 50px;
-  border-radius: 50px;
-  height: 50px;
+  width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.github-button {
+  display: inline-flex;
   align-items: center;
-  font-size: 25px;
-  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5),
-    inset 0px 0px 10px 0px #393939;
-  transition: 0.3s;
-  opacity: 0;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #eae5ec;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
 }
 
-.work-image a:hover {
-  color: inherit;
-}
-
-.work-image a:hover .work-link {
-  opacity: 1;
+.github-button:hover {
+  border-color: var(--accentColor);
+  color: var(--accentColor);
+  background: rgba(94, 234, 212, 0.05);
 }
 
 .work-image video {
@@ -229,7 +286,8 @@
 
 .work-image img {
   max-width: 100%;
-  max-height: 400px;
+  max-height: 48vh;
+  object-fit: contain;
   border-radius: 8px;
 }
 
@@ -301,7 +359,7 @@
 
 @media only screen and (max-width: 900px) {
   .work-section {
-    padding: 50px 0;
+    padding: 20px 0;
   }
 
   .work-section h2 {

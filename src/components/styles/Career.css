@@ -110,7 +110,7 @@
 
 /* ENTRY 1 (B.E.) */
 .entry-1 .career-degree {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 600;
   color: #ffffff;
 }
@@ -126,7 +126,7 @@
 
 /* ENTRY 2 (PUC) */
 .entry-2 .career-degree {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 500;
   color: #f4f4f5;
 }
@@ -135,13 +135,13 @@
   color: #d4d4d8;
 }
 .entry-2 .career-description {
-  font-size: 18px;
+  font-size: 22px;
   color: #a1a1aa;
 }
 
 /* ENTRY 3 (High School) */
 .entry-3 .career-degree {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 500;
   color: #e4e4e7;
 }
@@ -150,7 +150,7 @@
   color: #a1a1aa;
 }
 .entry-3 .career-description {
-  font-size: 16px;
+  font-size: 20px;
   color: #a1a1aa;
 }
 

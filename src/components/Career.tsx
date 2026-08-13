@@ -8,17 +8,17 @@ const Career = () => {
           THE FOUNDATION
         </h2>
         <p className="career-subtitle">
-          From computer science fundamentals to intelligent systems.
+          From Computer Science Fundamentals to Intelligent Systems.
         </p>
         <div className="career-info">
           <div className="career-timeline">
             <div className="career-active-dot"></div>
           </div>
-          
+
           <div className="career-info-box entry-1">
             <div className="career-info-in">
               <div className="career-role">
-                <h4 className="career-degree">B.E. — Computer Science Engineering</h4>
+                <h4 className="career-degree">B.E.- Computer Science Engineering - AI&ML</h4>
                 <h5 className="career-institution">Maharaja Institute of Technology Mysore</h5>
               </div>
               <h3 className="career-dates">2023 — 2027</h3>
