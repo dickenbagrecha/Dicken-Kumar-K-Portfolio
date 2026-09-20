@@ -26,30 +26,30 @@ const Contact = () => {
         ease: "power3.out"
       })
       .from(".contact-heading-container > *", {
-        y: 50,
+        y: 40,
         opacity: 0,
         duration: 1,
-        stagger: 0.15,
+        stagger: 0.1,
         ease: "power3.out"
       }, "-=1")
       .from(".contact-info-block", {
-        y: 30,
+        y: 20,
         opacity: 0,
         duration: 0.8,
-        stagger: 0.15,
+        stagger: 0.1,
         ease: "power3.out"
       }, "-=0.6")
       .from(".contact-signature", {
         opacity: 0,
-        x: 30,
+        x: 20,
         duration: 1,
         ease: "power3.out"
       }, "-=0.8")
       .from(".contact-actions > *", {
-        y: 20,
+        y: 15,
         opacity: 0,
         duration: 0.8,
-        stagger: 0.15,
+        stagger: 0.1,
         ease: "power3.out"
       }, "-=0.6")
       .from(".contact-footer", {
@@ -77,8 +77,7 @@ const Contact = () => {
               <span className="contact-eyebrow">GET IN TOUCH</span>
               <h2 className="contact-heading">
                 <span className="text-light">LET'S CREATE</span><br/>
-                <span className="text-cyan">SOMETHING</span>{" "}
-                <span className="text-purple">MEANINGFUL.</span>
+                <span className="text-cyan">SOMETHING</span> <span className="text-purple">MEANINGFUL.</span>
               </h2>
               <p className="contact-description">
                 I'm always open to interesting conversations,<br/>
@@ -128,7 +127,7 @@ const Contact = () => {
                 <TbSend className="send-icon" />
               </a>
               
-              <a href="#" className="btn-resume" data-cursor="disable">
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-resume" data-cursor="disable">
                 <span>RESUME</span>
                 <TbNotes />
               </a>
