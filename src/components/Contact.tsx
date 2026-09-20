@@ -127,7 +127,15 @@ const Contact = () => {
                 <TbSend className="send-icon" />
               </a>
               
-              <a href="/Dicken_Kumar_K_CV.pdf" download="Dicken-Kumar-K-Resume.pdf" className="btn-resume" data-cursor="disable">
+              <a 
+                href="/Dicken_Kumar_K_CV.pdf" 
+                download="Dicken-Kumar-K-Resume.pdf" 
+                className="btn-resume" 
+                data-cursor="disable"
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              >
                 <span>RESUME</span>
                 <TbNotes />
               </a>
